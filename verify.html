@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            color: #333333;
+        }
+        .header {
+            background: linear-gradient(135deg, #f72585, #7209b7);
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #ffffff;
+        }
+        .header p {
+            margin: 10px 0 0;
+            font-size: 16px;
+            color: #fcd5ff;
+        }
+        .content {
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #f72585;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #d61e6c;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #999999;
+        }
+        .alt-link {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+            word-break: break-all;
+        }
+        @media only screen and (max-width: 600px) {
+            .content, .header, .footer {
+                padding: 20px 15px;
+            }
+            .btn {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Verifica la tua email</h1>
+        <p>Grazie per esserti registrato su <strong>freescreening</strong></p>
+    </div>
+    <div class="content">
+        <p>Ciao, {NAME}!</p>
+        <p>Per completare la creazione del tuo account, ti chiediamo di confermare il tuo indirizzo email cliccando sul pulsante qui sotto.</p>
+        <a href="${URL}" class="btn">Verifica ora</a>
+
+        <p class="alt-link">Se non riesci a cliccare sul pulsante, copia e incolla questo link nel tuo browser:<br>
+            <a href="${URL}" style="color:#7209b7;">${URL}</a></p>
+
+        <p style="margin-top: 30px; font-size: 14px; color: #777;">Se non hai richiesto questa registrazione, puoi ignorare questa email.</p>
+    </div>
+    <div class="footer">
+        © 2025 Freescreening · Tutti i diritti riservati
+    </div>
+</div>
+</body>
+</html>
